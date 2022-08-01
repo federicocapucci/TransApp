@@ -337,12 +337,12 @@ select{
 }
 
 #title:focus, #amount:focus, #Trtype:focus, #date:focus #filter:focus{
-    background-color: transparent;    
-    color:#0A0;
+    background-color: RGBA(0,0,0,0.3);    
+    color:#3f3;    
     border: 1px solid white;
     margin: inherit - 1px;
     padding: inherit - 1px;
-    transition: all 0.3s ease-out;
+    transition: all 0.25s ease-out;
 }
 
 

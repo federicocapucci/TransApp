@@ -49,7 +49,6 @@ function currentDate() {
 
 //Sorts the columns depending on clicked column header
 function sortList(e) {
-  console.log(listOfTrxns);
   hTitle.classList.remove("picked");
   hTitle.classList.remove("picked2");
   hDate.classList.remove("picked");
@@ -58,7 +57,6 @@ function sortList(e) {
   hAmount.classList.remove("picked2");
 
   if (pickedColumn === e.currentTarget.textContent.toLowerCase()) {
-    console.log("same column selected again");
     trxnContainer.innerHTML = "";
     e.currentTarget.classList.toggle("picked");
     e.currentTarget.classList.toggle("picked2");
@@ -71,7 +69,7 @@ function sortList(e) {
 
     if (listOfTrxns.length > 0) {
       listOfTrxns.map((a) => (a.amount = parseInt(a.amount)));
-      console.log(listOfTrxns);
+
       let sortedCopy = listOfTrxns.sort((a, b) =>
         a[pickedColumn] > b[pickedColumn] ? 1 : -1
       );
