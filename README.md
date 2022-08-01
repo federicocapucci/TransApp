@@ -1,5 +1,7 @@
 <h1>CHALLENGE FULL STACK from Alkemy - JavaScript - Budget App</h1>
 
+<img src="https://i.ibb.co/N3h0mJx/Screenshot-2022-08-01-160937.png" alt="Xamp Config">
+
 ## Table of contents
 
 - [About this project](#about)
