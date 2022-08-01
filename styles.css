@@ -518,13 +518,4 @@ select{
         font-size: 30px;
         margin-left: inherit -50%;
     }
-
-    #filter{     
-        visibility: hidden;
-    }
-
-    #filter input{
-        font-size: 6px;
-    }
-
 }
