@@ -46,7 +46,6 @@ git clone https://github.com/federicocapucci/TransApp.git
 
 ```
 npm install express cors sequelize mysql2 
-
 ```
 
 3- Next, please open Xampp program. Click start on the 'MySQL' option, in the default port (3306).
@@ -57,7 +56,7 @@ npm install express cors sequelize mysql2
 4- Once Xamp is running, Open 'HeidiSQL' and create a new session with default options, You may call it 'TransApp' for example > Then open it.
 
 <br><br>
-<img src="https://i.ibb.co/zQpNYGt/Heidi-Session.png" alt="Heidi Session setup">
+<img src="https://i.ibb.co/jJq9XQv/Screenshot-2022-08-01-155747.png" alt="Heidi Session setup">
 <br><br><br><br>
 
 5- On Heidi, select to load SQL file. Then from the repository folder, select the SQL file 'TransApp.sql'. It contains the commands to create the database.
