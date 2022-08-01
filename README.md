@@ -59,11 +59,11 @@ npm install express cors sequelize mysql2
 <img src="https://i.ibb.co/jJq9XQv/Screenshot-2022-08-01-155747.png" alt="Heidi Session setup">
 <br><br><br><br>
 
-5- On Heidi, select to load SQL file. Then from the repository folder, select the SQL file 'TransApp.sql'. It contains the commands to create the database.
+5- On Heidi, select to load SQL file. Then from the repository folder, select the SQL file 'TransApp.sql'. It contains the commands to create the database. After this, the Database is ready to go.
 <br><br>
 <img src="https://i.ibb.co/JBYGsZs/Heidi-Load-SQLFile.png" alt="Heidi Load SQL">
 <br><br><br><br>
-Con esto, ya esta lista la base de datos con sus tablas correspondientes para poder empezar a hacer llamadas. 
+
 <br><br>
 <img src="https://i.ibb.co/4RNpjs8/Heidi-Ready.png" alt="Heidi ready">
 <br><br>
