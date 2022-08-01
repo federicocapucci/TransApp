@@ -1,6 +1,8 @@
-var express = require("express");
-var cors = require("cors");
-var app = express();
+//--------Variables------------//
+const express = require("express");
+const cors = require("cors");
+const app = express();
+const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
@@ -10,8 +12,6 @@ const db = new Sequelize("transapp", "root", "", {
   host: "localhost",
   dialect: "mysql",
 });
-
-var PORT = 3000;
 
 //----------------E N D P O I N T S ---------------//
 

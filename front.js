@@ -1,19 +1,57 @@
-window.addEventListener("load", initialLoad);
+//----------Variables---------------//
 let listOfTrxns = [];
 pickedColumn = "";
+const url = "http://127.0.0.1:3000/";
+
 const title = document.getElementById("title");
 const amount = document.getElementById("amount");
 const balance = document.getElementById("balance");
 balance.classList.add("amounts");
 const form = document.getElementById("form");
 const trxnContainer = document.getElementById("trxnContainer");
-let errorp = document.getElementsByClassName("errorp")[0];
-let hTitle = document.getElementById("h-title");
-let hDate = document.getElementById("h-date");
-let hAmount = document.getElementById("h-amount");
-form.addEventListener("submit", getFormData);
-let url = "http://127.0.0.1:3000/";
+const errorp = document.getElementsByClassName("errorp")[0];
+const hTitle = document.getElementById("h-title");
+const hDate = document.getElementById("h-date");
+const hAmount = document.getElementById("h-amount");
+const filters = document.getElementById("filter");
 
+filters.addEventListener("click", function (e) {
+  const trxns = document.getElementsByClassName("row-type");
+
+  if (e.target.value == "inc") {
+    for (let trxn of trxns) {
+      trxn.parentElement.style.position = "relative";
+      trxn.parentElement.style.display = "flex";
+
+      if (trxn.textContent != "inc") {
+        trxn.parentElement.style.position = "absolute";
+        trxn.parentElement.style.display = "none";
+      }
+    }
+  }
+  if (e.target.value == "out") {
+    for (let trxn of trxns) {
+      trxn.parentElement.style.position = "relative";
+      trxn.parentElement.style.display = "flex";
+
+      if (trxn.textContent != "out") {
+        trxn.parentElement.style.position = "absolute";
+        trxn.parentElement.style.display = "none";
+      }
+    }
+  }
+  if (e.target.value == "all") {
+    for (let trxn of trxns) {
+      trxn.parentElement.style.position = "relative";
+      trxn.parentElement.style.display = "flex";
+    }
+  }
+});
+
+//--------Event Listeners-------------//
+
+window.addEventListener("load", initialLoad);
+form.addEventListener("submit", getFormData);
 hTitle.addEventListener("click", sortList);
 hDate.addEventListener("click", sortList);
 hAmount.addEventListener("click", sortList);
@@ -155,7 +193,7 @@ async function fillTrxnList(order) {
     const spanamount = document.createElement("span");
     spanamount.classList.add("row-amount", "amounts");
     const spanType = document.createElement("span");
-    spanType.classList.add("hidden");
+    spanType.classList.add("row-type", "hidden");
 
     spanid.textContent = trxnItem.ID;
     spantitle.textContent = trxnItem.title;
@@ -287,6 +325,7 @@ async function editTrxnInfo() {
   });
 }
 
+//Deletes transaction from the server, reloads the page with current list of transactions
 async function deleteTrxnInfo() {
   let fetchOptions = {
     method: "DELETE",

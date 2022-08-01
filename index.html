@@ -15,7 +15,7 @@
 
 <body>
     <div id="full-container">
-        <h4 id="mainTitle">TransApp Challenge App</h4>
+        <h4 id="mainTitle">TransApp</h4>
         <div id="balance-container">
             <h3>Current Balance: </h3>
             <span id="balance"></span>
@@ -46,10 +46,11 @@
         </div>
         <div id="filter">
             <h4>Filter by</h4>
-            <input type="radio" class="filter-input" name="filter" value="all">All trxns</input>
-            <input type="radio" class="filter-input" name="filter" value="inc">Income only</input>
-            <input type="radio" class="filter-input" name="filter" value="out">Outcome only</input>
-
+            <select id="Trtype" name="entryType">
+                <option value="all">All</option>
+                <option value="inc">Income</option>
+                <option value="out">Outcome</option>
+            </select>
         </div>
     </div>
 

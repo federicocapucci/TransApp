@@ -1,6 +1,6 @@
 html{
     font-size: 18px;    
-    font-family: arial, Geneva, Tahoma, sans-serif; 
+    font-family: arial, Tahoma, sans-serif; 
     box-sizing: border-box;        
 }
 
@@ -353,9 +353,9 @@ select{
     cursor: pointer;
 }
 
-#title:focus, #amount:focus, #Trtype:focus, #date:focus{
+#title:focus, #amount:focus, #Trtype:focus, #date:focus #filter:focus{
     background-color: transparent;
-    color:white;
+    color:#0F0;
     border: 1px solid white;
     margin: inherit - 1px;
     padding: inherit - 1px;
@@ -412,18 +412,31 @@ select{
   } 
 
   #filter{
-    width: 100%;
-    height: 40px;
-    background-color: black;
+    top: 280px;
+    right: 5%;    
+    height: 20px;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.5);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    text-decoration-color: 2px solid #219921;
+    padding: 12px 0  ;         
+  }  
 
-  .filter-input{
-    margin: 5px 5px 0 60px;
-  }
+  input[type="radio"]:checked:before {
+    
+    content: "";
+    display: block;
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #219921;
+}
 
 
 @media (max-width: 1000px){
@@ -527,6 +540,12 @@ select{
         margin-left: inherit -50%;
     }
 
+    #filter{     
+        visibility: hidden;
+    }
+
+    #filter input{
+        font-size: 6px;
+    }
 
 }
-
