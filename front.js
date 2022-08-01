@@ -70,9 +70,14 @@ function sortList(e) {
     if (listOfTrxns.length > 0) {
       listOfTrxns.map((a) => (a.amount = parseInt(a.amount)));
 
-      let sortedCopy = listOfTrxns.sort((a, b) =>
-        a[pickedColumn] > b[pickedColumn] ? 1 : -1
-      );
+      let sortedCopy;
+      if (pickedColumn == "title") {
+        sortedCopy = listOfTrxns.sort((a, b) => a.title.localeCompare(b.title));
+      } else {
+        sortedCopy = listOfTrxns.sort((a, b) =>
+          a[pickedColumn] > b[pickedColumn] ? 1 : -1
+        );
+      }
 
       trxnContainer.innerHTML = "";
       return fillTrxnList(sortedCopy);
