@@ -66,9 +66,6 @@ npm install express cors sequelize mysql2
 <img src="https://i.ibb.co/JBYGsZs/Heidi-Load-SQLFile.png" alt="Heidi Load SQL">
 <br><br><br><br>
 
-<br><br>
-<img src="https://i.ibb.co/4RNpjs8/Heidi-Ready.png" alt="Heidi ready">
-<br><br>
 6- To start the Backend server, please run the following code in a Visual code terminal
 
 ```
