@@ -15,39 +15,6 @@ const hDate = document.getElementById("h-date");
 const hAmount = document.getElementById("h-amount");
 const filters = document.getElementById("filter");
 
-filters.addEventListener("click", function (e) {
-  const trxns = document.getElementsByClassName("row-type");
-
-  if (e.target.value == "inc") {
-    for (let trxn of trxns) {
-      trxn.parentElement.style.position = "relative";
-      trxn.parentElement.style.display = "flex";
-
-      if (trxn.textContent != "inc") {
-        trxn.parentElement.style.position = "absolute";
-        trxn.parentElement.style.display = "none";
-      }
-    }
-  }
-  if (e.target.value == "out") {
-    for (let trxn of trxns) {
-      trxn.parentElement.style.position = "relative";
-      trxn.parentElement.style.display = "flex";
-
-      if (trxn.textContent != "out") {
-        trxn.parentElement.style.position = "absolute";
-        trxn.parentElement.style.display = "none";
-      }
-    }
-  }
-  if (e.target.value == "all") {
-    for (let trxn of trxns) {
-      trxn.parentElement.style.position = "relative";
-      trxn.parentElement.style.display = "flex";
-    }
-  }
-});
-
 //--------Event Listeners-------------//
 
 window.addEventListener("load", initialLoad);
@@ -55,6 +22,7 @@ form.addEventListener("submit", getFormData);
 hTitle.addEventListener("click", sortList);
 hDate.addEventListener("click", sortList);
 hAmount.addEventListener("click", sortList);
+filters.addEventListener("click", filterTrxns);
 
 //----------Functions---------------//
 
@@ -340,4 +308,38 @@ async function deleteTrxnInfo() {
   await fetch(url, fetchOptions);
   trxnContainer.innerHTML = "";
   fillTrxnList("");
+}
+
+//Filter transactions according to selection
+function filterTrxns(e) {
+  const trxns = document.getElementsByClassName("row-type");
+
+  if (e.target.value == "inc") {
+    for (let trxn of trxns) {
+      trxn.parentElement.style.position = "relative";
+      trxn.parentElement.style.display = "flex";
+
+      if (trxn.textContent != "inc") {
+        trxn.parentElement.style.position = "absolute";
+        trxn.parentElement.style.display = "none";
+      }
+    }
+  }
+  if (e.target.value == "out") {
+    for (let trxn of trxns) {
+      trxn.parentElement.style.position = "relative";
+      trxn.parentElement.style.display = "flex";
+
+      if (trxn.textContent != "out") {
+        trxn.parentElement.style.position = "absolute";
+        trxn.parentElement.style.display = "none";
+      }
+    }
+  }
+  if (e.target.value == "all") {
+    for (let trxn of trxns) {
+      trxn.parentElement.style.position = "relative";
+      trxn.parentElement.style.display = "flex";
+    }
+  }
 }
