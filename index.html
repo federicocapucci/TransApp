@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./imgs/money.ico">
+
+
+    <script src="front.js" defer></script>
+    <title>TransApp - Budget app</title>
+</head>
+
+<body>
+    <div id="full-container">
+        <h4 id="mainTitle">TransApp Challenge App</h4>
+        <div id="balance-container">
+            <h3>Current Balance: </h3>
+            <span id="balance"></span>
+
+        </div>
+
+        <form id="form">
+            <h3 class="newTrxnTitle">Add Trxn </h3>
+            <input type="text" name="title" id="title" placeholder="Title" maxlength="80" required>
+            <input id="amount" name="amount" type="number" min="0.00" max="999999999.99" step="0.01"
+                placeholder="Enter amount" required>
+            <select id="Trtype" name="entryType">
+                <option value="inc">Income</option>
+                <option value="out">Outcome</option>
+            </select>
+            <input type="date" id="date" placeholder="Date" required>
+            <button type="submit" id="submit" name="submit" value="Submit">+</button>
+        </form>
+
+        <div id="headers">
+            <h4 id="trxnsTitle">Transactions list</h4>
+            <span id="h-title">Title</span>
+            <span id="h-date">Date</span>
+            <span id="h-amount">Amount</span>
+            <span id="h-empty"></span>
+        </div>
+        <div id="trxnContainer">
+        </div>
+        <div id="filter">
+            <h4>Filter by</h4>
+            <input type="radio" class="filter-input" name="filter" value="all">All trxns</input>
+            <input type="radio" class="filter-input" name="filter" value="inc">Income only</input>
+            <input type="radio" class="filter-input" name="filter" value="out">Outcome only</input>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,532 @@
+html{
+    font-size: 18px;    
+    font-family: arial, Geneva, Tahoma, sans-serif; 
+    box-sizing: border-box;        
+}
+
+body{
+    
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    height: 100vh;    
+    position: relative;
+    background: url(https://st3.depositphotos.com/5045705/17127/v/600/depositphotos_171279688-stock-illustration-cartoon-100-dollar-bill.jpg);
+    background-repeat: repeat;    
+    background-size: 500px;
+    width: 100%;
+    animation: animate 60s linear infinite;
+    
+}
+
+@keyframes animate {
+    from {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    to {
+        background-position-x: 20%;
+        background-position-y: -150%;
+    }
+}
+
+
+
+#full-container {    
+    padding: 0 8px;    
+    background-color: rgba(0,0,0,0.5);    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: middle;
+    width: 80%;    
+    min-width: 460px;
+    max-width: 1400px;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden !important;    
+    
+}
+
+#mainTitle{
+    width: 100%;
+    margin: 5px auto 25px auto;
+    text-align: center;
+    height: 5px;
+    font-size: 40px;
+    padding: 30px;    
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+
+#balance-container{        
+    width: 100%;
+    margin: auto;
+    height: 60px;
+    background-color: rgba(0,0,0,0.85);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+      
+}
+
+#balance-container h3{
+    width: 60%;
+    text-align: right;
+    margin: 0 5px;
+    font-size: 30px;
+    
+}
+
+#balance{
+    font-weight: 600;
+    color: green;
+    font-size: 30px;
+    width: 40%;
+    text-align: left;    
+    margin: 0 5px;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;    
+}
+
+#form{    
+    width: 100%;    
+    height: 100px;    
+    margin: 0 auto 5px ;    
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-wrap: wrap;        
+    background-color: rgba(100,100,100,0.8);
+    color: white;            
+}
+
+
+select{
+    height: 30px;   
+    border: none;
+}
+
+#trxnContainer{     
+    width: 100%;
+    height: 60vh;    
+    overflow-x:hidden;
+    overflow-y: auto;       
+    padding-top: 5px;     
+    margin-top: 0 auto 10px auto;   
+}
+
+
+
+#headers{
+    background-color: rgba(0,0,0,0.9);        
+    width: 100%;               
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;    
+    flex-wrap: wrap;    
+    color:white;
+    font-weight: 800;
+    font-size: 18px; 
+    padding: 15px 0;    
+}
+
+
+.picked{
+    text-decoration: underline;
+    text-decoration-color: #219921;   
+    text-decoration-thickness: 6px; 
+}
+
+.picked::after{
+    content:"↓"
+}
+
+
+.picked2::after{
+    text-decoration: underline;
+    text-decoration-color: #219921;   
+    text-decoration-thickness: 6px; 
+}
+
+.picked2::after{
+    content:"↑"
+}
+
+
+
+#trxnsTitle{ 
+    margin: 0 auto -5px auto;    
+    width: 100%;
+    height: 30px;
+    height: 40px;       
+    color: white;
+    text-align: center;    
+    font-size: 30   px;
+    padding-top: 5px ;
+    font-size: 35px;
+    font-weight: 600;    
+    margin-bottom: 15px;
+       
+}
+
+#h-title{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 8px;
+    width: 53%;
+    margin: 0;
+    height: 20px;
+    cursor: pointer;    
+}
+
+#h-date{
+    width: 12%;
+    padding-top: 8px;    
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    height: 25px;
+    cursor: pointer;        
+}
+
+#h-amount{    
+    padding-top: 8px;
+    width: 15%;
+    height: 25px;
+    font-weight: 600;
+    text-align: right;
+    font-size: 25px;
+    margin-right: 0;    
+    padding-right: 10px;
+    cursor: pointer;      
+}
+
+#h-empty{
+    width: 10%;    
+    padding-top: 8px;    
+       
+    
+}
+
+.income{    
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0,140,0,0.7);
+    color:white;
+    box-shadow: inset 0 0 3px #000;
+    font-size: 18px;
+    padding: 5px 0;
+    margin: 5px auto;    
+}
+
+.income:hover{
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    padding: 4px 0; 
+    background-color: rgba(0,140,0,1);    
+}
+
+.outcome{
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(140,0,0,0.7);
+    color:white;
+    box-shadow: inset 0 0 3px #000;
+    font-size: 18px;
+    padding: 5px 0;
+    margin: 5px auto;    
+}
+.outcome:hover{
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    padding: 4px 0;
+    background-color: rgba(140,0,0,1);
+    
+}
+
+
+
+.row-title{    
+    text-align: left;
+    width: 55%;
+    height: 25px;
+}
+
+.row-date{
+    
+    width: 15%;
+    text-align: left;
+    height: 25px;
+}
+
+
+.row-amount{    
+    
+    width: 15%;
+    height: 25px;
+    text-align: right;
+    margin-right: 0;
+    font-size: 20px; 
+    
+    padding-right: 10px;     
+}
+
+
+.hidden{
+    display: none;
+}
+
+.errorp{
+    position: absolute;
+    margin-top: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+
+.amounts::before{
+    content: "$";    
+}
+
+.trxnButtons{
+    
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.deleteButton{    
+    font-size: 14px;
+    height: 25px;
+    width: 50px;
+    font-weight: 500;    
+    border: 1px double white;
+    color:white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 6px 2px 0;
+    cursor: pointer;    
+}
+
+.deleteButton:hover{
+    background: linear-gradient(rgba(0,0,220,0.3), rgba(0,0,255,0.3));    
+}
+
+.editButton{    
+    font-size: 14px;
+    height: 25px;
+    width: 50px;
+    font-weight: 500;    
+    border: 1px double white;
+    color:white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 6px 2px 0;
+    cursor: pointer;    
+}
+
+.editButton:hover{
+    background: linear-gradient(rgba(0,0,220,0.3), rgba(0,0,255,0.3));    
+}
+
+#title, #amount, #Trtype, #date, #submit {    
+    height: 35px; 
+    min-width: 40px;
+    margin: 5px 10px; 
+    padding: 0 10px;
+    border-radius: 2px;
+    text-align: left;
+    outline:none;
+    border:none;        
+    cursor: pointer;
+}
+
+#title:focus, #amount:focus, #Trtype:focus, #date:focus{
+    background-color: transparent;
+    color:white;
+    border: 1px solid white;
+    margin: inherit - 1px;
+    padding: inherit - 1px;
+    transition: all 0.3s ease-out;
+}
+
+
+*::placeholder{
+    color: #999;
+}
+
+
+
+.center{
+    position: absolute;
+    left:50%;
+    right:50%;
+    transform:translate(-50%, -50%);
+}
+
+#submit{
+    text-align: center;
+    background-color: rgba(0,255,0,0.5);
+    color: white;
+    font-size:30px;
+}
+
+#submit:hover{
+    text-align: center;
+    background-color: rgba(0,0,255,0.5);
+    color: white;
+    font-size:30px;
+    transition: all 0.3s ease-out;
+}
+
+
+*::-webkit-scrollbar {      
+    margin-left: 2px;  
+    border-radius: 20px;    
+    width: 22px;    
+  }
+   
+ *::-webkit-scrollbar-track {  
+    margin-left: 2px;      
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 20px;    
+  }
+   
+  * ::-webkit-scrollbar-thumb {
+    margin-left: 2px;  
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid gray;
+    border-radius: 20px;        
+  } 
+
+  #filter{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filter-input{
+    margin: 5px 5px 0 60px;
+  }
+
+
+@media (max-width: 1000px){
+
+    #form{
+        justify-content: end;
+        width: 100%;              
+    }
+
+
+    #form *{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+
+    #title{
+        width: 60%;        
+        margin-right: 5px;
+    }
+    .newTrxnTitle{
+        width: 20%;
+
+    }
+
+    
+    *{
+        font-size: 14px ;
+    }   
+
+    
+    .row-title{        
+        width: 30%;    
+    }
+    .row-date{
+        width: 20%;        
+    }
+    
+    
+    .row-amount{    
+        width: 20%;   
+        font-size: 14px;   
+        font-weight: 800;  
+    }
+    
+
+    .deleteButton{
+        font-size: 12px;        
+        width: 40px;        
+    }
+    
+       
+    .editButton{    
+        font-size: 12px;
+        width: 40px;
+        
+    }
+    #h-title{
+    font-size: 14px;
+       width: 20%;
+       margin: 0;      
+    }
+    
+    #h-date{
+        font-size: 14px;
+        text-align: center;
+        width: 20%;
+        margin: 0;
+        
+    }
+    
+    
+    #h-amount{    
+        font-size: 14px;   
+        width: 20%;  
+        margin: 0;                  
+    }
+
+
+    #h-empty{
+        width: 10%;    
+        padding-top: 8px;        
+        
+    } 
+
+    #balance-container h3{       
+        font-size: 22px;
+        
+    }
+    
+    #balance{        
+        font-size: 22px;
+    }
+    
+    #trxnsTitle{
+        font-size: 22px;
+        letter-spacing: normal;
+    }
+    #mainTitle{
+        font-size: 30px;
+        margin-left: inherit -50%;
+    }
+
+
+}
+
