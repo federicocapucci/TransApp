@@ -1,6 +1,7 @@
-<h1>CHALLENGE FULL STACK from Alkemy - JavaScript - Budget App</h1>
+<h1>TransApp - A simple Budget App</h1>
 
-<img src="https://i.ibb.co/N3h0mJx/Screenshot-2022-08-01-160937.png" alt="Xamp Config">
+
+<img src="https://i.ibb.co/f4SvZ4G/main-app-screen.png" style="width:100%" alt="Xamp Config">
 
 ## Table of contents
 
@@ -12,11 +13,15 @@
 
 ##  About this project <a name = "about"></a>
 
-This was a challenge requested by Alkemy for joining their talent course. It required completing a simple full-stack application  managing transactions/budget. It allows for Adding/editing and deleting transactions as well as displaying the balance. User may sort or filter the transaction list.
-Technologies used:
-Front: HTML, CSS, Vanilla JS
-Back: NodeJS, Express, Sequelise, CORS
-Other: GIT, Xampp, Heidi SQL
+<p>This was a challenge requested by Alkemy for joining their talent course. It required completing a simple full-stack application  managing transactions/budget. It allows for Adding/editing and deleting transactions as well as displaying the balance. User may sort or filter the transaction list.
+</p>
+
+<p>Technologies used:</p>
+
+<p><b>Front: HTML, CSS, Vanilla JS</p>
+<p>Back: NodeJS, Express, Sequelise, CORS</p>
+<p>Other: GIT, Xampp, Heidi SQL</b></p>
+
 <br><br>
 
 ## Instructions <a name = "instructions"></a>
