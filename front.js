@@ -1,8 +1,10 @@
 //----------Variables---------------//
-let listOfTrxns = [];
-pickedColumn = "";
-const url = "http://127.0.0.1:3000/";
+//Misc
+const url = "http://127.0.0.1:3000/"; // Backend Server URL
+let listOfTrxns = []; //Will contain trxns brought from the database
+pickedColumn = ""; //For sorting list of trxns
 
+//DOM
 const title = document.getElementById("title");
 const amount = document.getElementById("amount");
 const balance = document.getElementById("balance");
@@ -57,10 +59,9 @@ function sortList(e) {
   hAmount.classList.remove("picked2");
 
   if (pickedColumn === e.currentTarget.textContent.toLowerCase()) {
-    trxnContainer.innerHTML = "";
     e.currentTarget.classList.toggle("picked");
     e.currentTarget.classList.toggle("picked2");
-
+    trxnContainer.innerHTML = "";
     return fillTrxnList(listOfTrxns.reverse());
   } else {
     e.currentTarget.classList.add("picked");
