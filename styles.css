@@ -1,3 +1,8 @@
+*{
+        outline:none !important;
+}
+
+
 html{
     font-size: 18px;    
     font-family: arial, Tahoma, sans-serif; 
@@ -248,13 +253,22 @@ select{
     text-align: left;
     width: 55%;
     height: 25px;
+    transition: all 0.25s ease-out;
 }
+
+.row-title:focus, .row-date:focus, .row-amount:focus{    
+    background-color: RGBA(0,0,0,0.3);    
+    color:white;    
+    border: 2px solid white;
+}
+
 
 .row-date{
     
     width: 15%;
     text-align: left;
     height: 25px;
+    transition: all 0.25s ease-out;
 }
 
 
@@ -264,9 +278,9 @@ select{
     height: 25px;
     text-align: right;
     margin-right: 0;
-    font-size: 20px; 
-    
+    font-size: 20px;     
     padding-right: 10px;     
+    transition: all 0.25s ease-out;
 }
 
 
@@ -341,6 +355,8 @@ select{
     outline:none;
     border:none;        
     cursor: pointer;
+    transition: all 0.25s ease-out;
+
 }
 
 #title:focus, #amount:focus, #Trtype:focus, #date:focus #filter:focus{
@@ -349,8 +365,9 @@ select{
     border: 1px solid white;
     margin: inherit - 1px;
     padding: inherit - 1px;
-    transition: all 0.25s ease-out;
+    
 }
+
 
 
 *::placeholder{
