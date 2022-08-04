@@ -1,27 +1,25 @@
-*{
+*,*::before,*::after{
         outline:none !important;
-}
-
-
-
+        margin: 0;
+        padding:0;
+    }
 
 html{
     font-size: 18px;    
     font-family: arial, Tahoma, sans-serif; 
-    box-sizing: border-box;        
+    box-sizing: border-box;
+    
 }
 
 body{
-    
-    margin: 0;
-    padding: 0;
-    width:100vw;
-    height: 100vh;    
+    margin: 0 !important;    
+    padding: 0 !important;
+    width: 100%;    
+    height: fit-content;  
     position: relative;
     background: url(./imgs/bckgrnd.png);
     background-repeat: repeat;    
-    background-size: 700px;
-    width: 100%;
+    background-size: 700px;    
     animation: animate 600s linear infinite;
     
 }
@@ -37,23 +35,18 @@ body{
     }
 }
 
-
-
 #full-container {    
     padding: 0 8px;    
     background-color: rgba(0,0,0,0.5);    
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: middle;
-    width: 80%;    
-    min-width: 460px;
+    justify-content: baseline;
+    align-items: stretch;
+    width: 80%;        
     max-width: 1400px;
     height: 100vh;
-    margin: auto;
-    overflow: hidden !important;    
-    
+    margin: auto;    
 }
 
 #mainTitle{
@@ -72,6 +65,7 @@ body{
     width: 100%;
     margin: auto;
     height: 60px;
+    padding: 5px 0 ;
     background-color: rgba(0,0,0,0.85);
     color: white;
     display: flex;
@@ -120,7 +114,7 @@ select{
 
 #trxnContainer{      
     width: 100%;
-    height: 60vh;        
+    flex-grow: 2;
     overflow-y: auto;       
     padding-top: 5px;     
     margin-top: 0 auto 10px auto;   
@@ -128,7 +122,8 @@ select{
 
 #headers{
     background-color: rgba(0,0,0,0.9);        
-    width: 100%;               
+    width: 100%;
+    height: 60px;    
     display: flex;
     justify-content: space-evenly;
     align-items: left;    
@@ -136,7 +131,7 @@ select{
     color:white;
     font-weight: 800;
     font-size: 18px; 
-    padding: 15px 0;    
+    padding: 5px 0;    
 }
 
 
@@ -435,9 +430,19 @@ option{
 
 @media (max-width: 1000px){
 
+    #full-container {
+        margin: none;            
+        width: 98%;       
+        height: 100%;        
+        margin: auto;
+        min-width: 280px;   
+    }
+    
+
     #form{
         justify-content: end;
-        width: 100%;              
+        width: 100%;
+        height: fit-content;                    
     }
 
 
@@ -526,7 +531,105 @@ option{
     }    
 
     #mainTitle{
-        font-size: 30px;
-        margin-left: inherit -50%;
+        font-size: 30px;        
     }
+    #headers{
+        height: 40px;
+    }
+}
+
+@media (max-width: 400px){   
+    
+    #headers{
+        height: 30px;
+    }
+
+    *::-webkit-scrollbar {             
+        width: 8px;    
+        border-radius: none;
+        border: none;
+      }  
+
+    
+#mainTitle{    
+    margin:  3px 0;
+    text-align: center;    
+    padding: 0;
+    height: 30px;
+    font-size: 20px;    
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+    #form{
+        flex-direction: column;
+        align-items: stretch !important;
+        justify-content: flex-end; 
+    }
+
+    #form *{
+        height:30px;
+        overflow: hidden;
+    }
+
+    #form h3{
+        width: 100%;
+        margin: 2px auto ;
+        text-align: center;
+    }
+
+    #title{
+        position: relative;
+        width: 91%;
+        margin: 2px auto ;
+    }
+
+    .deleteButton{
+        font-size: 8px;
+        content: "";        
+        width: 20px;        
+    }
+    
+       
+    .editButton{    
+        font-size: 8px;
+        content: "";        
+        width: 20px;  
+        
+    }
+
+    .row-title{        
+        font-size: 8px; 
+    }
+    .row-date{
+        font-size: 8px; 
+    }
+    
+    
+    .row-amount{            
+        font-size: 8px; 
+        font-weight: 600;  
+    }
+
+    #h-title{
+        font-size: 10px;
+          
+          
+        }
+        
+        #h-date{
+            font-size: 10px;
+            
+            
+        }
+        
+        
+        #h-amount{    
+            font-size: 10px;   
+            
+        }
+    
+    
+    
+    
 }
